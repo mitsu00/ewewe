@@ -16,6 +16,7 @@ jobs:
       run: unzip ngrok.zip
     - name: Install Libraries
       run: |
+       sudo apt update
        sudo apt install snapd
        sudo apt install openssh-server
        sudo systemctl status ssh
