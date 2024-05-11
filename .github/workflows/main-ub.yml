@@ -37,6 +37,7 @@ jobs:
       run: sudo sed -i "s|#\!/bin/sh|#\!/bin/bash|g" /etc/X11/Xsession
     - name: Starting XRDP
       run: |
+        sudo service slim start
         sudo adduser xrdp ssl-cert
         sudo service xrdp restart
         sudo service xrdp status
