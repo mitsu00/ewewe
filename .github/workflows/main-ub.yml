@@ -34,7 +34,7 @@ jobs:
       run: |
        sudo ufw allow 3389/tcp #setting tcp port 
     - name: Run Bash
-      run: sudo sed -i "s|#\!/bin/sh|#\!/bin/bash|g" /etc/X11/Xsession
+      run: sudo echo "slim" > /home/mitsuaa/.xesession
     - name: Starting XRDP
       run: |
         sudo service slim start
