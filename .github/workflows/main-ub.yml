@@ -17,9 +17,7 @@ jobs:
     - name: Install Libraries
       run: |
        sudo apt update
-       sudo apt install openssh-server
-       sudo apt install xrdp
-       sudo apt install xubuntu-desktop
+       sudo apt install xubuntu-desktop xrdp
     - name: Creating New User
       run: |
         user=mitsuaa
