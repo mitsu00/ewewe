@@ -19,7 +19,7 @@ jobs:
        sudo apt update
        sudo apt install openssh-server
        sudo apt install xrdp
-       sudo apt install xubuntu-desktop
+       sudo apt install slim lxde
     - name: Creating New User
       run: |
         user=mitsuaa
@@ -40,10 +40,6 @@ jobs:
         sudo adduser xrdp ssl-cert
         sudo service xrdp restart
         sudo service xrdp status
-    - name: Config Of XRDP vim
-      run: |
-        sudo apt install nano -y
-        echo `cat /etc/xrdp/xrdp.ini`
     - name: Make Ngrok Executable
       run: sudo cp ./ngrok /usr/bin/ngrok
     - name: Auth
